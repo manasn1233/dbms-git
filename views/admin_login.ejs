@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Login</title>
+</head>
+<body>
+  <h1>Admin Login</h1>
+
+  <!-- Home button -->
+  <div style="margin-bottom: 20px;">
+    <a href="/" 
+       style="
+         background-color: #3498db; 
+         color: white; 
+         padding: 8px 16px; 
+         text-decoration: none; 
+         border-radius: 4px;
+         font-weight: bold;
+         display: inline-block;
+       "
+    >
+      Home
+    </a>
+  </div>
+
+  <form method="POST" action="/admin/login">
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <label for="password">Password:</label><br>
+    <input type="password" id="password" name="password" required><br><br>
+
+    <button type="submit">Login</button>
+  </form>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>All Lost & Found Items</title>
+</head>
+<body>
+  <h1>All Lost & Found Items</h1>
+  <a href="/">Home</a> | <a href="/report">Report an Item</a>
+  <table border="1" cellpadding="8" cellspacing="0">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Status</th>
+        <th>Reported By</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% if(items.length === 0) { %>
+        <tr><td colspan="5">No items reported yet.</td></tr>
+      <% } else { %>
+        <% items.forEach(item => { %>
+          <tr>
+            <td><%= item.title %></td>
+            <td><%= item.description %></td>
+            <td><%= item.status %></td>
+            <td><%= item.name %></td>
+            <td><%= item.email %></td>
+          </tr>
+        <% }); %>
+      <% } %>
+    </tbody>
+  </table>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Report Lost/Found Item</title>
+</head>
+<body>
+  <h1>Report Lost/Found Item</h1>
+  <a href="/">Home</a> | <a href="/items">View All Items</a>
+  <form action="/submit" method="POST">
+    <label>Name:</label><br>
+    <input type="text" name="name" required /><br><br>
+
+    <label>Email:</label><br>
+    <input type="email" name="email" required /><br><br>
+
+    <label>Title of Item:</label><br>
+    <input type="text" name="title" required /><br><br>
+
+    <label>Description:</label><br>
+    <textarea name="description" required></textarea><br><br>
+
+    <label>Status:</label><br>
+    <select name="status" required>
+      <option value="">Select</option>
+      <option value="lost">Lost</option>
+      <option value="found">Found</option>
+    </select><br><br>
+
+    <button type="submit">Submit Report</button>
+  </form>
+</body>
+</html>
