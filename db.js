@@ -1,8 +1,8 @@
-require('dotenv').config(); // Load .env variables in local development
-
 const mysql = require('mysql2');
 
-const pool = mysql.createPool({
+// Don't require dotenv here — Railway already provides the environment variables
+
+const db = mysql.createPool({
   host: process.env.MYSQL_HOST,
   user: process.env.MYSQL_USER,
   password: process.env.MYSQL_PASSWORD,
@@ -13,4 +13,4 @@ const pool = mysql.createPool({
   queueLimit: 0,
 });
 
-module.exports = pool;
+module.exports = db;
